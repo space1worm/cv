@@ -1,8 +1,9 @@
-import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-
+import { useState } from "react";
 import { Link } from "react-router-dom";
+
+import Button from "@components/button/Button.component";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -15,7 +16,7 @@ export default function Nav(): JSX.Element {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
+    <header className="fixed inset-x-0 top-0 z-50">
       <nav
         className="flex items-center justify-between p-6 lg:px-8"
         aria-label="Global"
@@ -52,12 +53,7 @@ export default function Nav(): JSX.Element {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link
-            to="#"
-            className="text-sm font-semibold leading-6 text-gray-900"
-          >
-            Log in <span aria-hidden="true">&rarr;</span>
-          </Link>
+          <Button className="px-4 py-2 text-xs">Log in</Button>
         </div>
       </nav>
       <Dialog

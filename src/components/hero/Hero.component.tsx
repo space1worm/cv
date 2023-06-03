@@ -1,3 +1,4 @@
+import Button from "@/components/button/Button.component";
 import Heading from "@/components/heading/Heading.component";
 import { fromBottomToTop, fromLeftToRight } from "@constants/animationOptions";
 
@@ -19,7 +20,7 @@ export default function Hero(): JSX.Element {
             }}
           />
         </div>
-        <div className="mx-auto max-w-2xl py-32 sm:pb-48 lg:py-56">
+        <div className="mx-auto max-w-2xl py-32 sm:pb-48 lg:py-44">
           <div className="text-center">
             <Heading
               text="Irakli Kverenchkhiladze"
@@ -43,14 +44,7 @@ export default function Hero(): JSX.Element {
             </WithTransition>
 
             <WithTransition options={fromBottomToTop}>
-              <div className="mt-10 flex items-center justify-center gap-x-6">
-                <a
-                  href="#"
-                  className="text-sm font-semibold leading-6 text-gray-900"
-                >
-                  Learn more <span aria-hidden="true">→</span>
-                </a>
-              </div>
+              <Button>Let's Talk</Button>
             </WithTransition>
           </div>
         </div>

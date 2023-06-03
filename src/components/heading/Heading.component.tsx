@@ -1,7 +1,8 @@
 import { HTMLAttributes } from "react";
 
-import WithTransition from "../with-transition/WithTransition";
 import { withPulseEffect } from "@constants/animationOptions";
+
+import WithTransition from "../with-transition/WithTransition";
 
 interface Props extends HTMLAttributes<HTMLHeadingElement> {
   text: string;
