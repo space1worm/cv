@@ -2,11 +2,7 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
     /* Bundler mode */
@@ -22,35 +18,18 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",
-    "types": [
-      "node"
-    ],
+    "types": ["node"],
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@components/*": [
-        "./src/components/*"
-      ],
-      "@models/*": [
-        "./src/models/*"
-      ],
-      "@services/*": [
-        "./src/services/*"
-      ],
-      "@utils/*": [
-        "./src/utils/*"
-      ],
-      "@pages/*": [
-        "./src/pages/*"
-      ],
+      "@/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@models/*": ["./src/models/*"],
+      "@services/*": ["./src/services/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@context/*": ["./src/context/*"]
     }
   },
-  "include": [
-    "src",
-    "tailwind.config.cjs",
-    "postcss.config.cjs",
-  ],
+  "include": ["src", "tailwind.config.cjs", "postcss.config.cjs"],
   "references": [
     {
       "path": "./tsconfig.node.json"
