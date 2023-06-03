@@ -1,6 +1,6 @@
 import WithPadding from "@ui/WithPadding";
 
-import Title from "@components/title/Title.component";
+import Title from "@/components/heading/Heading.component";
 
 export default function Skills(): JSX.Element {
   return (

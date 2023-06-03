@@ -1,4 +1,7 @@
-import Title from "@/components/title/Title.component";
+import Heading from "@/components/heading/Heading.component";
+import { fromBottomToTop, fromLeftToRight } from "@constants/animationOptions";
+
+import WithTransition from "../with-transition/WithTransition";
 
 export default function Hero(): JSX.Element {
   return (
@@ -18,29 +21,37 @@ export default function Hero(): JSX.Element {
         </div>
         <div className="mx-auto max-w-2xl py-32 sm:pb-48 lg:py-56">
           <div className="text-center">
-            <Title
+            <Heading
               text="Irakli Kverenchkhiladze"
               className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl"
             />
 
-            <div className="mb-8 mt-6 flex justify-center">
-              <div className="relative w-40 rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 sm:w-auto">
-                <span>Fullstack Developer</span>
+            <WithTransition options={fromBottomToTop}>
+              <div className="mb-8 mt-2 flex justify-center">
+                <div className="relative w-40 rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 sm:w-auto">
+                  <span>Fullstack Developer</span>
+                </div>
               </div>
-            </div>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-              lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-              fugiat aliqua.
-            </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
-                href="#"
-                className="text-sm font-semibold leading-6 text-gray-900"
-              >
-                Learn more <span aria-hidden="true">→</span>
-              </a>
-            </div>
+            </WithTransition>
+
+            <WithTransition options={fromLeftToRight}>
+              <p className="mt-6 text-lg leading-8 text-gray-600">
+                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
+                lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
+                fugiat aliqua.
+              </p>
+            </WithTransition>
+
+            <WithTransition options={fromBottomToTop}>
+              <div className="mt-10 flex items-center justify-center gap-x-6">
+                <a
+                  href="#"
+                  className="text-sm font-semibold leading-6 text-gray-900"
+                >
+                  Learn more <span aria-hidden="true">→</span>
+                </a>
+              </div>
+            </WithTransition>
           </div>
         </div>
       </div>
