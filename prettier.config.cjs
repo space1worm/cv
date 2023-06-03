@@ -1,0 +1,37 @@
+/** @type {import("@ianvs/prettier-plugin-sort-imports").PrettierConfig} */
+module.exports = {
+  printWidth: 80,
+  tabWidth: 2,
+  semi: true,
+  singleQuote: false,
+  trailingComma: "none",
+  bracketSpacing: true,
+  jsxBracketSameLine: false,
+  arrowParens: "always",
+  endOfLine: "auto",
+  importOrder: [
+    "react",
+    "",
+    "<THIRD_PARTY_MODULES>",
+    "",
+    "^@types/(.*)$",
+    "",
+    "^@context/(.*)$",
+    "",
+    "^@pages/(.*)$",
+    "",
+    "^@ui/(.*)$",
+    "",
+    "^@components/(.*)$",
+    "",
+    "^@services/(.*)$",
+    "",
+    "^@models/(.*)$",
+    "",
+    "^@utils/(.*)$",
+    "",
+    "^[./]"
+  ],
+  importOrderParserPlugins: ["typescript", "jsx", "decorators-legacy"],
+  plugins: ["prettier-plugin-tailwindcss"]
+};
